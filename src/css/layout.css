@@ -1,0 +1,83 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: var(--color-black-80);
+  border-bottom: var(--stroke-1) solid var(--color-navy);
+}
+
+.header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  height: 64px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--space-16);
+}
+
+.nav__list {
+  display: flex;
+  align-items: center;
+  gap: var(--space-32);
+  list-style: none;
+}
+
+.nav__link {
+  text-decoration: none;
+  color: var(--color-grey-light);
+  transition: color 0.2s ease;
+}
+
+.nav__link:hover {
+  color: var(--color-white);
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--color-white);
+  cursor: pointer;
+}
+
+.hero {
+  position: relative;
+  min-height: calc(90vh - 72px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  color: var(--color-white);
+  text-align: center;
+}
+
+.hero__bg {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-image:
+    radial-gradient(circle at center, rgba(255, 255, 255, 0.12) 0%, rgba(23, 23, 23, 0) 80%),
+    radial-gradient(circle at center, rgba(255, 255, 255, 0.18) 0%, rgba(23, 23, 23, 0) 80%),
+    linear-gradient(rgba(23, 23, 23, 0.68), rgba(23, 23, 23, 0.80)),
+    url("../../assets/images/earth-background.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.hero__content {
+  max-width: 600px;
+    display: flex;
+  flex-direction: column;
+  gap: var(--space-16);
+  align-items: center;
+}
+
+.hero__text {
+  color: var(--color-grey-medium);
+}

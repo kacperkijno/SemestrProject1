@@ -1,186 +1,143 @@
-/*
- * Haugesund Science Museum — tokens synced from Figma JSON (hsm.desktop / hsm.mobile).
- * Figma quirks corrected: font-weight was "400px"/"700px" → numeric 400/700;
- * opacity group was exported in px → mapped to 0–1 for CSS opacity.
- */
 
 :root {
   /* ----- Colors (shared desktop/mobile) ----- */
 
-  --hsm-color-black: #171717;
-  --hsm-color-black-0: rgba(23, 23, 23, 0);
-  --hsm-color-black-40: rgba(23, 23, 23, 0.4);
-  --hsm-color-black-50: rgba(23, 23, 23, 0.5);
-  --hsm-color-black-60: rgba(23, 23, 23, 0.6);
-  --hsm-color-black-80: rgba(23, 23, 23, 0.8);
+  --color-black: #171717;
+  --color-black-0: rgba(23, 23, 23, 0);
+  --color-black-40: rgba(23, 23, 23, 0.4);
+  --color-black-50: rgba(23, 23, 23, 0.5);
+  --color-black-60: rgba(23, 23, 23, 0.6);
+  --color-black-80: rgba(23, 23, 23, 0.8);
 
-  --hsm-color-white: #ffffff;
-  --hsm-color-white-1: rgba(255, 255, 255, 0.01);
+  --color-white: #ffffff;
+  --color-white-1: rgba(255, 255, 255, 0.01);
 
-  --hsm-color-violet: #8b5cf6;
-  --hsm-color-violet-10: rgba(139, 92, 246, 0.1);
-  --hsm-color-violet-20: rgba(139, 92, 246, 0.2);
+  --color-violet: #8b5cf6;
+  --color-violet-10: rgba(139, 92, 246, 0.1);
+  --color-violet-20: rgba(139, 92, 246, 0.2);
 
-  --hsm-color-blue: #3b82f6;
-  --hsm-color-blue-10: rgba(59, 130, 246, 0.1);
-  --hsm-color-blue-20: rgba(59, 130, 246, 0.2);
+  --color-blue: #3b82f6;
+  --color-blue-10: rgba(59, 130, 246, 0.1);
+  --color-blue-20: rgba(59, 130, 246, 0.2);
 
-  --hsm-color-green: #22c55e;
-  --hsm-color-green-10: rgba(34, 197, 94, 0.1);
-  --hsm-color-green-20: rgba(34, 197, 94, 0.2);
+  --color-green: #22c55e;
+  --color-green-10: rgba(34, 197, 94, 0.1);
+  --color-green-20: rgba(34, 197, 94, 0.2);
 
-  --hsm-color-orange: #fb923c;
-  --hsm-color-orange-10: rgba(251, 146, 60, 0.1);
-  --hsm-color-orange-20: rgba(251, 146, 60, 0.2);
+  --color-orange: #fb923c;
+  --color-orange-10: rgba(251, 146, 60, 0.1);
+  --color-orange-20: rgba(251, 146, 60, 0.2);
 
-  --hsm-color-grey-light: #d4d4d4;
-  --hsm-color-grey-medium: #a3a3a3;
-  --hsm-color-grey-dark: #737373;
-  --hsm-color-grey-very-dark: #334155;
+  --color-grey-light: #d4d4d4;
+  --color-grey-medium: #a3a3a3;
+  --color-grey-dark: #737373;
+  --color-grey-very-dark: #334155;
 
-  --hsm-color-navy: #1e293b;
-  --hsm-color-navy-50: rgba(30, 41, 59, 0.5);
-  --hsm-color-navy-80: rgba(30, 41, 59, 0.8);
+  --color-navy: #1e293b;
+  --color-navy-50: rgba(30, 41, 59, 0.5);
+  --color-navy-80: rgba(30, 41, 59, 0.8);
 
-  --hsm-color-red: #fb7185;
-  --hsm-color-red-10: rgba(244, 63, 94, 0.1);
-  --hsm-color-red-20: rgba(244, 63, 94, 0.2);
+  --color-red: #fb7185;
+  --color-red-10: rgba(244, 63, 94, 0.1);
+  --color-red-20: rgba(244, 63, 94, 0.2);
 
   /* Figma "opacity" group exported with px — interpreted as percent for CSS */
-  --hsm-opacity-40: 0.4;
-  --hsm-opacity-50: 0.5;
-  --hsm-opacity-75: 0.75;
-  --hsm-opacity-80: 0.8;
-  --hsm-opacity-100: 1;
+  --opacity-40: 0.4;
+  --opacity-50: 0.5;
+  --opacity-75: 0.75;
+  --opacity-80: 0.8;
+  --opacity-100: 1;
 
   /* ----- Stroke weight ----- */
 
-  --hsm-stroke-0-5: 0.5px;
-  --hsm-stroke-0-75: 0.75px;
-  --hsm-stroke-0-83: 0.8333333134651184px;
-  --hsm-stroke-0-88: 0.875px;
-  --hsm-stroke-1: 1px;
-  --hsm-stroke-1-13: 1.125px;
-  --hsm-stroke-1-25: 1.25px;
-  --hsm-stroke-1-5: 1.5px;
+  --stroke-1: 1px;
 
   /* ----- Item spacing (desktop) ----- */
 
-  --hsm-space-8: 8px;
-  --hsm-space-16: 16px;
-  --hsm-space-24: 24px;
-  --hsm-space-32: 32px;
-  --hsm-space-48: 48px;
-  --hsm-space-96: 96px;
-  --hsm-space-120: 120px;
+  --space-8: 8px;
+  --space-16: 16px;
+  --space-24: 24px;
+  --space-32: 32px;
+  --space-48: 48px;
+  --space-96: 96px;
+  --space-120: 120px;
 
-  /* ----- Width ----- */
-
-  --hsm-width-384: 384px;
-  --hsm-width-448: 448px;
-  --hsm-width-576: 576px;
-  --hsm-width-672: 672px;
-  --hsm-width-768: 768px;
-  --hsm-width-896: 896px;
-  --hsm-width-1280: 1280px;
 
   /* ----- Font size (desktop) ----- */
 
-  --hsm-fs-14: 14px;
-  --hsm-fs-16: 16px;
-  --hsm-fs-24: 24px;
-  --hsm-fs-30: 30px;
-  --hsm-fs-48: 48px;
-  --hsm-fs-80: 80px;
-  --hsm-fs-96: 96px;
+  --fs-14: 14px;
+  --fs-16: 16px;
+  --fs-24: 24px;
+  --fs-30: 30px;
+  --fs-48: 48px;
+  --fs-80: 80px;
+  --fs-96: 96px;
 
   /* ----- Font family / weight (Figma font-1 = generic sans) ----- */
 
-  --hsm-font-family-1: system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-family-1: "Segoe UI", "Inter", "Roboto", "Helvetica Neue", Arial, sans-serif;
   /* Figma exported 400px/700px — numeric weights for CSS */
-  --hsm-fw-400: 400;
-  --hsm-fw-700: 700;
+  --font-family-header: "Syne", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --fw-400: 400;
+  --fw-700: 700;
 
   /* ----- Letter spacing ----- */
 
-  --hsm-ls-neg-0-5: -0.5px;
-  --hsm-ls-neg-0-6: -0.6000000238418579px;
-  --hsm-ls-neg-0-75: -0.75px;
-  --hsm-ls-neg-0-9: -0.8999999761581421px;
-  --hsm-ls-neg-1: -1px;
-  --hsm-ls-neg-1-2: -1.2000000476837158px;
-  --hsm-ls-neg-1-5: -1.5px;
-  --hsm-ls-neg-4-8: -4.800000190734863px;
+  --ls-neg-1: -1px;
+  --ls-neg-1-5: -1.5px;
 
   /* ----- Line height ----- */
 
-  --hsm-lh-22-75: 22.75px;
-  --hsm-lh-28: 28px;
-  --hsm-lh-32: 32px;
-  --hsm-lh-36: 36px;
+  --lh-16: 16px;
+  --lh-28: 28px;
+  --lh-36: 36px;
+      --lh-80: 80px;
+    --lh-96: 96px;
 
-  /* ----- Height / misc ----- */
-
-  --hsm-height-1080: 1080px;
-  --hsm-number: 48px;
+ 
 
   /* ----- Radius ----- */
 
-  --hsm-radius-4: 4px;
-  --hsm-radius-16: 16px;
-  --hsm-radius-100: 100px;
-  --hsm-radius-9999: 9999px;
+  --radius-4: 4px;
+  --radius-16: 16px;
+  --radius-100: 100px;
+  --radius-9999: 9999px;
 
-  /* ----- Semantic aliases (site UI) — map Figma → existing component tokens ----- */
+  /* Color styles */
+--image-border: #1E293B;
 
-  --color-bg: var(--hsm-color-black);
-  --color-bg-elevated: var(--hsm-color-navy);
-  --color-surface: var(--hsm-color-grey-very-dark);
-  --color-text: var(--hsm-color-white);
-  --color-text-muted: var(--hsm-color-grey-medium);
-  --color-accent: var(--hsm-color-blue);
-  --color-accent-hover: color-mix(in srgb, var(--hsm-color-blue) 82%, var(--hsm-color-white));
-  --color-on-accent: var(--hsm-color-white);
+/* Text-size styles */
+--main-small: 14px;
+--main: 16px;
+--eyebrow-hero: 12px;
+--heading-2: 48px;
+--heading-3: 24px;
+--heading-1: 96px;
+--heading-2--c-t-a: 80px;
+--logo: 24px;
+--header-4: 16px;
+--subhero: 30px;
 
-  --font-sans: var(--hsm-font-family-1);
-  --font-size-sm: var(--hsm-fs-14);
-  --font-size-xs: var(--hsm-fs-14);
-  --line-height-body: calc(var(--hsm-lh-28) / var(--hsm-fs-16));
-  /* Figma only defines 400 / 700 — 500 kept for UI between regular and bold */
-  --font-weight-medium: 500;
-  --font-weight-semibold: var(--hsm-fw-700);
-  --font-weight-bold: var(--hsm-fw-700);
-
-  --space-xs: var(--hsm-space-8);
-  --space-sm: var(--hsm-space-16);
-  --space-md: var(--hsm-space-24);
-  --space-lg: var(--hsm-space-48);
-  --space-xl: var(--hsm-space-96);
-
-  --radius-sm: var(--hsm-radius-4);
-  --radius-md: var(--hsm-radius-16);
-  --max-width-content: var(--hsm-width-1280);
-  --width-prose: var(--hsm-width-576);
-  --width-prose-wide: var(--hsm-width-672);
-
-  --border-width-default: var(--hsm-stroke-1);
-
-  --duration-fast: 150ms;
+/* Effect styles */
+--shadow-1:  0px 4px 6px rgba(0, 0, 0, 0.1), 0px 2px 4px rgba(0, 0, 0, 0.1);
+--layer-blur-blur: blur(120px);
 }
 
 /* ----- Mobile token overrides (Figma hsm.mobile) ----- */
 
 @media (max-width: 47.9375rem) {
   :root {
-    --hsm-space-96: 24px;
-    --hsm-space-120: 60px;
+    --space-96: 24px;
+    --space-120: 60px;
 
-    --hsm-fs-14: 12px;
-    --hsm-fs-16: 14px;
-    --hsm-fs-24: 20px;
-    --hsm-fs-30: 22px;
-    --hsm-fs-48: 32px;
-    --hsm-fs-80: 40px;
-    --hsm-fs-96: 48px;
+    --fs-14: 12px;
+    --fs-16: 14px;
+    --fs-24: 20px;
+    --fs-30: 22px;
+    --fs-48: 32px;
+    --fs-80: 40px;
+    --fs-96: 48px;
   }
 }
+
+
