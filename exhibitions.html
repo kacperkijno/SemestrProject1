@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Current and upcoming exhibitions at Haugesund Science Museum." />
+    <title>Exhibitions — Haugesund Science Museum</title>
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+
+    <div class="page">
+      <header class="site-header">
+        <div class="site-header__inner">
+          <p class="site-header__tagline">Explore · Discover · Learn</p>
+          <p class="site-header__title">Haugesund Science Museum</p>
+          <nav class="site-nav" aria-label="Primary">
+            <ul class="site-nav__list">
+              <li><a class="site-nav__link" href="index.html">Home</a></li>
+              <li>
+                <a
+                  class="site-nav__link site-nav__link--current"
+                  href="exhibitions.html"
+                  aria-current="page"
+                  >Exhibitions</a
+                >
+              </li>
+              <li><a class="site-nav__link" href="visit.html">Visit</a></li>
+              <li><a class="site-nav__link" href="index.html#news">News</a></li>
+              <li><a class="site-nav__link" href="contact.html">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+
+      <main id="main">
+        <section class="hero" aria-labelledby="page-heading">
+          <div class="hero__inner">
+            <h1 id="page-heading" class="hero__title">Exhibitions</h1>
+            <p class="hero__lead">
+              Rotating displays and permanent galleries — see what is on now and what is opening next.
+            </p>
+          </div>
+        </section>
+
+        <section class="section" aria-labelledby="current-heading">
+          <div class="section__inner">
+            <h2 id="current-heading" class="section__title">On now</h2>
+            <div class="card-grid">
+              <article class="card">
+                <h3 class="card__title">Oceans &amp; coast</h3>
+                <p class="card__text">Interactive models, samples, and stories from the Norwegian coast.</p>
+              </article>
+              <article class="card">
+                <h3 class="card__title">Energy lab</h3>
+                <p class="card__text">Hands-on stations for wind, water, and solar — built for curious minds.</p>
+              </article>
+              <article class="card">
+                <h3 class="card__title">Sky &amp; space</h3>
+                <p class="card__text">Planetarium-style demos and a timeline of exploration.</p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <!-- Swap "Coming soon" content for your Figma layout: reuse .section, .card-grid, .card, .card__* -->
+        <section class="section section--alt" aria-labelledby="soon-heading">
+          <div class="section__inner">
+            <h2 id="soon-heading" class="section__title">Coming soon</h2>
+            <p class="section__text">
+              New temporary exhibitions will be announced here — follow our channels for dates and themes.
+            </p>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <div class="site-footer__inner">
+          <p class="site-footer__copy">
+            &copy; <span id="year"></span> Haugesund Science Museum. All rights reserved.
+          </p>
+          <nav class="site-footer__nav" aria-label="Footer">
+            <ul class="site-footer__list">
+              <li><a class="site-footer__link" href="contact.html">Contact</a></li>
+              <li><a class="site-footer__link" href="#">Privacy</a></li>
+              <li><a class="site-footer__link" href="#">Accessibility</a></li>
+            </ul>
+          </nav>
+        </div>
+      </footer>
+    </div>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>

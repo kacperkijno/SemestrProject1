@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Haugesund Science Museum — exhibitions, events, and learning for all ages."
+    />
+    <title>Haugesund Science Museum</title>
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+
+    <div class="page">
+      <header class="site-header">
+        <div class="site-header__inner">
+          <p class="site-header__tagline">Explore · Discover · Learn</p>
+          <p class="site-header__title">Haugesund Science Museum</p>
+          <nav class="site-nav" aria-label="Primary">
+            <ul class="site-nav__list">
+              <li>
+                <a class="site-nav__link site-nav__link--current" href="index.html" aria-current="page"
+                  >Home</a
+                >
+              </li>
+              <li><a class="site-nav__link" href="exhibitions.html">Exhibitions</a></li>
+              <li><a class="site-nav__link" href="visit.html">Visit</a></li>
+              <li><a class="site-nav__link" href="index.html#news">News</a></li>
+              <li><a class="site-nav__link" href="contact.html">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+
+      <main id="main">
+        <section class="hero" aria-labelledby="hero-heading">
+          <div class="hero__inner">
+            <h1 id="hero-heading" class="hero__title">Science on the west coast</h1>
+            <p class="hero__lead">
+              Hands-on exhibits, family workshops, and stories from nature and technology — in the heart
+              of Haugesund.
+            </p>
+            <p class="hero__actions"><a class="btn btn--primary" href="visit.html">Plan your visit</a></p>
+          </div>
+        </section>
+
+        <section id="exhibitions" class="section" aria-labelledby="exhibitions-heading">
+          <div class="section__inner">
+            <h2 id="exhibitions-heading" class="section__title">Exhibitions</h2>
+            <div class="card-grid">
+              <article class="card">
+                <h3 class="card__title">Oceans &amp; coast</h3>
+                <p class="card__text">Marine life, tides, and how we care for the North Sea.</p>
+              </article>
+              <article class="card">
+                <h3 class="card__title">Energy lab</h3>
+                <p class="card__text">Wind, water, and light — experiment with sustainable power.</p>
+              </article>
+              <article class="card">
+                <h3 class="card__title">Sky &amp; space</h3>
+                <p class="card__text">Stars, weather, and what it takes to explore beyond Earth.</p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section id="visit" class="section section--alt" aria-labelledby="visit-heading">
+          <div class="section__inner">
+            <h2 id="visit-heading" class="section__title">Visit us</h2>
+            <div class="split">
+              <article class="split__col">
+                <h3 class="card__title">Opening hours</h3>
+                <p class="section__text">Tuesday–Sunday, 10:00–17:00</p>
+                <p class="section__text">Closed Mondays (except public holidays).</p>
+              </article>
+              <aside class="aside-panel split__col" aria-label="Location note">
+                <h3 class="aside-panel__title">Getting here</h3>
+                <p class="aside-panel__text">
+                  We are located in central Haugesund, within walking distance of the harbour and public
+                  transport.
+                </p>
+              </aside>
+            </div>
+          </div>
+        </section>
+
+        <section id="news" class="section" aria-labelledby="news-heading">
+          <div class="section__inner">
+            <h2 id="news-heading" class="section__title">Latest</h2>
+            <article class="teaser">
+              <h3 class="teaser__title">Spring family weekend</h3>
+              <p class="teaser__text">
+                Extra activities and guided tours — dates announced soon. Follow us for updates.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <section id="contact-teaser" class="section section--alt" aria-labelledby="contact-teaser-heading">
+          <div class="section__inner">
+            <h2 id="contact-teaser-heading" class="section__title">Contact</h2>
+            <address class="contact">
+              <p class="contact__line"><strong>Haugesund Science Museum</strong></p>
+              <p class="contact__line">Example Street 1, 5528 Haugesund, Norway</p>
+              <p class="contact__line">
+                Email:
+                <a href="mailto:hello@haugesundsciencemuseum.example">hello@haugesundsciencemuseum.example</a>
+              </p>
+              <p class="contact__line">Phone: <a href="tel:+4752000000">+47 52 00 00 00</a> (placeholder)</p>
+            </address>
+            <p class="section__actions">
+              <a class="btn btn--primary" href="contact.html">Full contact page</a>
+            </p>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <div class="site-footer__inner">
+          <p class="site-footer__copy">
+            &copy; <span id="year"></span> Haugesund Science Museum. All rights reserved.
+          </p>
+          <nav class="site-footer__nav" aria-label="Footer">
+            <ul class="site-footer__list">
+              <li><a class="site-footer__link" href="contact.html">Contact</a></li>
+              <li><a class="site-footer__link" href="#">Privacy</a></li>
+              <li><a class="site-footer__link" href="#">Accessibility</a></li>
+            </ul>
+          </nav>
+        </div>
+      </footer>
+    </div>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
