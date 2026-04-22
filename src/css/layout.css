@@ -15,7 +15,7 @@
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 1248px;
   margin: 0 auto;
   padding: 0 var(--space-16);
 }
@@ -80,4 +80,190 @@
 
 .hero__text {
   color: var(--color-grey-medium);
+}
+
+.intro__content {
+  max-width: 900px;
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 0px;
+}
+
+.intro__lead {
+  font-family: var(--font-family-1);
+  font-size: var(--fs-30);
+  line-height: var(--lh-36);
+  font-weight: var(--fw-400);
+
+  color: var(--color-white);
+}
+
+.intro__text {
+  font-family: var(--font-family-1);
+  font-size: var(--fs-30);
+  line-height: var(--lh-36);
+  font-weight: var(--fw-400);
+
+  color: var(--color-grey-medium);
+}
+
+.features__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-24);
+}
+
+.feature-card__title {
+  color: var(--color-white);
+}
+
+.feature-card__text {
+  color: var(--color-grey-medium);
+}
+
+.content-split__title {
+  color: var(--color-white);
+}
+
+.content-split__text {
+  color: var(--color-grey-medium);
+}
+
+.events__content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-48);
+}
+
+.events__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-32);
+}
+
+.event-card {
+  --card-accent: var(--color-violet); /* Domyślny kolor */
+  --card-accent-bg: var(--color-violet-10);
+  
+  position: relative;
+  height: 430px;
+  border-radius: var(--radius-16);
+  overflow: hidden;
+  background-color: #000; /* Tło pod zdjęcie */
+  border: var(--stroke-1) solid var(--image-border);
+  box-shadow: var(--shadow-1);
+  transition: border-color 0.3s ease, transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Zdjęcie w tle */
+.event-card__media {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.event-card__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: grayscale(100%); /* Luminosity effect */
+  opacity: 0.5;
+  transition: filter 0.4s ease, opacity 0.4s ease, transform 0.4s ease;
+}
+
+/* Ciemny nakładka (overlay) - aby tekst był czytelny */
+.event-card__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, var(--color-black-80), transparent);
+  z-index: 2;
+  transition: opacity 0.4s ease;
+}
+
+/* Treść nałożona na wierzch */
+.event-card__content {
+  position: relative;
+  z-index: 3; /* Nad zdjęciem i overlayem */
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; /* Spycha tekst na dół karty */
+  padding: var(--space-32);
+  gap: var(--space-16);
+  pointer-events: none; /* Kliknięcia przechodzą do karty */
+}
+
+/* Tag (Special Event) */
+.event-card__tag {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-8);
+  padding: var(--space-8) 4px;
+  background: var(--color-navy-80); /* Kolor tagu zależny od zmiennej */
+  border: var(--stroke-1) solid var(--image-border); /* Ramka tagu zależna od zmiennej */
+  border-radius: var(--radius-4);
+  width: fit-content;
+  color: var(--color-white); /* Tekst tagu zależny od zmiennej */
+}
+
+.event-card__icon {
+  width: 12px;
+  height: 12px;
+  color: var(--card-accent); /* Robi ikonkę białą */
+}
+
+.event-card:hover .event-card__tag {
+  background: var(--card-accent-bg); /* Kolor tagu zależny od zmiennej */
+  border: var(--stroke-1) solid var(--card-accent); /* Ramka tagu zależna od zmiennej */
+  color: var(--card-accent); /* Tekst tagu zależny od zmiennej */
+}
+
+.event-card:hover {
+  border-color: var(--card-accent); /* Ramka karty zmienia kolor na akcent */
+  transform: translateY(-4px);
+}
+
+.event-card:hover .event-card__media img {
+  filter: grayscale(0%); /* Przywraca kolory */
+  opacity: 0.8;          /* Rozjaśnia zdjęcie */
+  transform: scale(1.05); /* Lekko powiększa */
+}
+
+.event-card:hover .event-card__overlay {
+  opacity: 0; /* Gradient znika */
+}
+
+/* 6. WARIANTY KOLORYSTYCZNE */
+.event-card--blue {
+  --card-accent: var(--color-blue);
+  --card-accent-bg: var(--color-blue-10);
+}
+
+.event-card--green {
+  --card-accent: var(--color-green);
+  --card-accent-bg: var(--color-green-10);
+}
+
+.event-card--special {
+  --card-accent: var(--color-orange);
+  --card-accent-bg: var(--color-orange-10);
+}
+
+.eyebrow-text {
+  font-size: var(--main-small);
+  font-weight: var(--fw-400);
+}
+
+.event-card__title {
+color: var(--color-white);
+}
+
+.event-card__text {
+color: var(--color-grey-medium);
 }
