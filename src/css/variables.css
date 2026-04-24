@@ -1,7 +1,4 @@
-
 :root {
-  /* ----- Colors (shared desktop/mobile) ----- */
-
   --color-black: #171717;
   --color-black-0: rgba(23, 23, 23, 0);
   --color-black-40: rgba(23, 23, 23, 0.4);
@@ -41,18 +38,15 @@
   --color-red-10: rgba(244, 63, 94, 0.1);
   --color-red-20: rgba(244, 63, 94, 0.2);
 
-  /* Figma "opacity" group exported with px — interpreted as percent for CSS */
+  --image-border: #1e293b;
+
   --opacity-40: 0.4;
   --opacity-50: 0.5;
   --opacity-75: 0.75;
   --opacity-80: 0.8;
   --opacity-100: 1;
 
-  /* ----- Stroke weight ----- */
-
   --stroke-1: 1px;
-
-  /* ----- Item spacing (desktop) ----- */
 
   --space-8: 8px;
   --space-16: 16px;
@@ -62,9 +56,6 @@
   --space-96: 96px;
   --space-120: 120px;
 
-
-  /* ----- Font size (desktop) ----- */
-
   --fs-14: 14px;
   --fs-16: 16px;
   --fs-24: 24px;
@@ -73,57 +64,30 @@
   --fs-80: 80px;
   --fs-96: 96px;
 
-  /* ----- Font family / weight (Figma font-1 = generic sans) ----- */
-
-  --font-family-1: "Segoe UI", "Inter", "Roboto", "Helvetica Neue", Arial, sans-serif;
-  /* Figma exported 400px/700px — numeric weights for CSS */
-  --font-family-header: "Syne", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-family-1:
+    "Segoe UI", "Inter", "Roboto", "Helvetica Neue", Arial, sans-serif;
+  --font-family-header:
+    "Syne", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   --fw-400: 400;
   --fw-700: 700;
-
-  /* ----- Letter spacing ----- */
 
   --ls-neg-1: -1px;
   --ls-neg-1-5: -1.5px;
 
-  /* ----- Line height ----- */
-
   --lh-16: 16px;
   --lh-28: 28px;
   --lh-36: 36px;
-      --lh-80: 80px;
-    --lh-96: 96px;
-
- 
-
-  /* ----- Radius ----- */
+  --lh-80: 80px;
+  --lh-96: 96px;
 
   --radius-4: 4px;
   --radius-16: 16px;
   --radius-100: 100px;
   --radius-9999: 9999px;
 
-  /* Color styles */
---image-border: #1E293B;
-
-/* Text-size styles */
---main-small: 14px;
---main: 16px;
---eyebrow-hero: 12px;
---heading-2: 48px;
---heading-3: 24px;
---heading-1: 96px;
---heading-2--c-t-a: 80px;
---logo: 24px;
---header-4: 16px;
---subhero: 30px;
-
-/* Effect styles */
---shadow-1:  0px 4px 6px rgba(0, 0, 0, 0.1), 0px 2px 4px rgba(0, 0, 0, 0.1);
---layer-blur-blur: blur(120px);
+  --shadow-1: 0px 4px 6px rgba(0, 0, 0, 0.1), 0px 2px 4px rgba(0, 0, 0, 0.1);
+  --layer-blur-blur: blur(120px);
 }
-
-/* ----- Mobile token overrides (Figma hsm.mobile) ----- */
 
 @media (max-width: 47.9375rem) {
   :root {
@@ -139,5 +103,3 @@
     --fs-96: 48px;
   }
 }
-
-

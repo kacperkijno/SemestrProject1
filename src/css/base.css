@@ -11,30 +11,31 @@ h1 {
   font-family: var(--font-family-header);
   font-size: var(--fs-96);
   font-weight: var(--fw-700);
-
-  line-height: 0.95; /* 🔥 ważne */
+  line-height: 0.95;
   letter-spacing: var(--ls-neg-1-5);
   margin: 0;
-
 }
 
 h2 {
-    font-family: var(--font-family-header);
+  font-family: var(--font-family-header);
   font-size: var(--fs-48);
   font-weight: var(--fw-700);
   margin: 0;
 }
 
 h3 {
+  margin: 0;
   font-family: var(--font-family-1);
   font-size: var(--fs-24);
   font-weight: var(--fw-700);
   line-height: var(--lh-28);
 }
 
-p, a {
+p,
+a {
   margin: 0;
   padding: 0;
+  text-decoration: none;
 }
 
 .text-main-small {
@@ -48,5 +49,3 @@ p, a {
   font-size: var(--fs-16);
   font-weight: var(--fw-400);
 }
-
-
