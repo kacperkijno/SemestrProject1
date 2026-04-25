@@ -5,124 +5,457 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Opening hours, tickets, and how to get to Haugesund Science Museum."
+      content="Discover the latest at HSM: New solar telescope viewings, Winter Science Club registrations, and extended holiday hours. Check our weekly updated news and event schedule."
     />
-    <title>Visit — Haugesund Science Museum</title>
+    <title>Events | Haugesund Science Museum</title>
     <link rel="stylesheet" href="src/css/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Syne:wght@400..800&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <a class="skip-link" href="#main">Skip to main content</a>
 
-    <div class="page">
-      <header class="site-header">
-        <div class="site-header__inner">
-          <p class="site-header__tagline">Explore · Discover · Learn</p>
-          <p class="site-header__title">Haugesund Science Museum</p>
-          <nav class="site-nav" aria-label="Primary">
-            <ul class="site-nav__list">
-              <li><a class="site-nav__link" href="index.html">Home</a></li>
-              <li>
-                <a class="site-nav__link" href="exhibitions.html"
-                  >Exhibitions</a
-                >
-              </li>
-              <li>
-                <a
-                  class="site-nav__link site-nav__link--current"
-                  href="visit.html"
-                  aria-current="page"
-                  >Visit</a
-                >
-              </li>
-              <li><a class="site-nav__link" href="index.html#news">News</a></li>
-              <li><a class="site-nav__link" href="#">Contact</a></li>
-            </ul>
-          </nav>
-        </div>
-      </header>
+    <input type="checkbox" id="menu-toggle" hidden />
+    <header class="header">
+      <div class="container header__inner">
+        <a href="index.html" class="logo">
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <rect
+              width="24"
+              height="24"
+              rx="4"
+              fill="url(#paint0_linear_106_435)"
+            />
+            <g clip-path="url(#clip0_106_435)">
+              <path
+                d="M16.471 7.529C17.706 8.7635 16.705 11.766 14.236 14.2355C11.766 16.705 8.76354 17.7055 7.52904 16.471C6.29404 15.236 7.29504 12.234 9.76454 9.7645C12.234 7.295 15.2365 6.2945 16.471 7.529ZM7.52904 7.529C6.29404 8.764 7.29504 11.7665 9.76404 14.2355C12.234 16.705 15.2365 17.7055 16.471 16.471C17.706 15.2365 16.705 12.234 14.2355 9.7645C11.766 7.295 8.76354 6.2945 7.52904 7.529Z"
+                stroke="white"
+              />
+              <path
+                d="M13.25 12C13.25 12.3315 13.1183 12.6495 12.8839 12.8839C12.6495 13.1183 12.3315 13.25 12 13.25C11.6685 13.25 11.3505 13.1183 11.1161 12.8839C10.8817 12.6495 10.75 12.3315 10.75 12C10.75 11.6685 10.8817 11.3505 11.1161 11.1161C11.3505 10.8817 11.6685 10.75 12 10.75C12.3315 10.75 12.6495 10.8817 12.8839 11.1161C13.1183 11.3505 13.25 11.6685 13.25 12Z"
+                stroke="white"
+              />
+            </g>
+            <defs>
+              <linearGradient
+                id="paint0_linear_106_435"
+                x1="0"
+                y1="0"
+                x2="24"
+                y2="24"
+                gradientUnits="userSpaceOnUse"
+              >
+                <stop stop-color="#8B5CF6" />
+                <stop offset="1" stop-color="#3B82F6" />
+              </linearGradient>
+              <clipPath id="clip0_106_435">
+                <rect
+                  width="12"
+                  height="12"
+                  fill="white"
+                  transform="translate(6 6)"
+                />
+              </clipPath>
+            </defs>
+          </svg>
+          <span class="logo__text">HSM</span>
+        </a>
 
-      <main id="main">
-        <section class="hero" aria-labelledby="page-heading">
-          <div class="hero__inner">
-            <h1 id="page-heading" class="hero__title">Plan your visit</h1>
-            <p class="hero__lead">
-              Practical information for individuals, schools, and groups.
-            </p>
+        <nav class="nav nav--mobile">
+          <ul class="nav__list">
+            <li>
+              <a href="explore.html" class="nav__link text-main-small"
+                >Explore</a
+              >
+            </li>
+            <li>
+              <a href="exhibitions.html" class="nav__link text-main-small"
+                >Exhibitions</a
+              >
+            </li>
+            <li>
+              <a href="events.html" class="nav__link text-main-small"
+                >Events & News</a
+              >
+            </li>
+            <li>
+              <a href="get-involved.html" class="nav__link text-main-small"
+                >Get Involved</a
+              >
+            </li>
+          </ul>
+        </nav>
+
+        <a href="visit.html" class="btn btn--primary">Plan Your Visit</a>
+
+<label for="menu-toggle" class="menu-toggle" aria-label="Open menu">
+  <span></span>
+  <span></span>
+  <span></span>
+</label>
+      </div>
+    </header>
+
+    <main>
+
+      <!-- HERO -->
+      <section class="hero hero--visit">
+        <div class="hero__bg"></div>
+        <div class="container hero__content">
+          <div class="eyebrow--badge text-main-small">
+            <span class="dot"></span>
+            Interactive Space
           </div>
-        </section>
-
-        <section class="section" aria-labelledby="hours-heading">
-          <div class="section__inner">
-            <h2 id="hours-heading" class="section__title">
-              Hours &amp; admission
-            </h2>
-            <div class="split">
-              <div class="split__col">
-                <h3 class="card__title">Opening hours</h3>
-                <p class="section__text">Tuesday–Sunday, 10:00–17:00</p>
-                <p class="section__text">
-                  Closed Mondays (except public holidays).
-                </p>
-              </div>
-              <div class="split__col">
-                <h3 class="card__title">Tickets</h3>
-                <p class="section__text">
-                  Example pricing — replace with your real rates from Figma.
-                </p>
-                <p class="section__text">
-                  Adults 120 NOK · Children / students 60 NOK · Under 3 free.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section
-          class="section section--alt"
-          aria-labelledby="location-heading"
-        >
-          <div class="section__inner">
-            <h2 id="location-heading" class="section__title">Location</h2>
-            <div class="split">
-              <address class="contact split__col">
-                <p class="contact__line">
-                  <strong>Haugesund Science Museum</strong>
-                </p>
-                <p class="contact__line">
-                  Example Street 1<br />5528 Haugesund, Norway
-                </p>
-              </address>
-              <aside class="aside-panel split__col" aria-label="Transport">
-                <h3 class="aside-panel__title">Getting here</h3>
-                <p class="aside-panel__text">
-                  Bus stops within 5 minutes’ walk. Limited street parking.
-                </p>
-                <!-- Optional: map iframe — add block e.g. .map-embed in components.css using design tokens -->
-              </aside>
-            </div>
-          </div>
-        </section>
-      </main>
-
-      <footer class="site-footer">
-        <div class="site-footer__inner">
-          <p class="site-footer__copy">
-            &copy; <span id="year"></span> Haugesund Science Museum. All rights
-            reserved.
+          <h1>
+            Plan Your <br />
+            <span class="title-gradient">Visit.</span>
+          </h1>
+          <p class="hero__text text-main">
+            We're excited to welcome you and your family. Find everything you need to know about hours, admission, and getting here to make your day out spectacular.
           </p>
-          <nav class="site-footer__nav" aria-label="Footer">
-            <ul class="site-footer__list">
-              <li><a class="site-footer__link" href="#">Contact</a></li>
-              <li><a class="site-footer__link" href="#">Privacy</a></li>
-              <li><a class="site-footer__link" href="#">Accessibility</a></li>
+        </div>
+      </section>
+
+      <!-- OPENING HOURS & ADMISSION -->
+      <section class="visit-info">
+        <div class="container">
+
+          <!-- Opening Hours -->
+          <div class="feature-card">
+            <div class="feature-card__icon-box">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="currentColor" stroke-width="1.5" />
+                <path d="M12 6V12L16 14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+              </svg>
+            </div>
+            <h3 class="feature-card__title">Opening Hours</h3>
+            <div class="visit-hours">
+              <div class="visit-hours__row text-main-small">
+                <span>Monday</span>
+                <span class="visit-hours__closed">Closed</span>
+              </div>
+              <div class="visit-hours__row text-main-small">
+                <span>Tuesday – Thursday</span>
+                <span>10:00 – 16:00</span>
+              </div>
+              <div class="visit-hours__row text-main-small">
+                <span>Friday</span>
+                <span>10:00 – 19:00</span>
+              </div>
+              <div class="visit-hours__row text-main-small">
+                <span>Saturday</span>
+                <span>09:00 – 16:00</span>
+              </div>
+              <div class="visit-hours__row text-main-small">
+                <span>Sunday</span>
+                <span>09:00 – 13:00</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- General Admission -->
+          <div class="feature-card feature-card--green">
+            <div class="visit-admission__header">
+              <div class="feature-card__icon-box">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M4 10.143C4 5.646 7.582 2 12 2C16.418 2 20 5.646 20 10.143C20 14.605 17.447 19.813 13.463 21.674C13.0051 21.8884 12.5056 21.9996 12 21.9996C11.4944 21.9996 10.9949 21.8884 10.537 21.674C6.553 19.812 4 14.606 4 10.144V10.143Z" stroke="currentColor" stroke-width="1.5" />
+                  <path d="M12 13C13.6569 13 15 11.6569 15 10C15 8.34315 13.6569 7 12 7C10.3431 7 9 8.34315 9 10C9 11.6569 10.3431 13 12 13Z" stroke="currentColor" stroke-width="1.5" />
+                </svg>
+              </div>
+              <span class="visit-tag text-main-small">Free entry</span>
+            </div>
+            <h3 class="feature-card__title">General admission</h3>
+            <p class="feature-card__text text-main">
+              General admission to the Haugesund Science Museum is completely free for everyone. Explore our permanent exhibitions at your own pace.
+            </p>
+            <ul class="content-split__list">
+              <li class="feature-list__item">
+                <div class="feature-list__overlay">
+                  <div class="feature-list__icon">
+                    <svg viewBox="0 0 14 14" fill="none"><path d="M2 7L5.5 10.5L12 3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" /></svg>
+                  </div>
+                </div>
+                <span class="feature-list__text text-main-small">There are guided tours of the museum that leave every hour.</span>
+              </li>
+              <li class="feature-list__item">
+                <div class="feature-list__overlay">
+                  <div class="feature-list__icon">
+                    <svg viewBox="0 0 14 14" fill="none"><path d="M2 7L5.5 10.5L12 3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" /></svg>
+                  </div>
+                </div>
+                <span class="feature-list__text text-main-small">These tours are 70 NOK per person and include a handy printed guide of the museum.</span>
+              </li>
+              <li class="feature-list__item">
+                <div class="feature-list__overlay">
+                  <div class="feature-list__icon">
+                    <svg viewBox="0 0 14 14" fill="none"><path d="M2 7L5.5 10.5L12 3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" /></svg>
+                  </div>
+                </div>
+                <span class="feature-list__text text-main-small">If you would like to organise a guided tour for your group of 8 or more people, please contact us to arrange the tour.</span>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- LOCATION & DIRECTIONS -->
+      <section class="content-split content-split--violet">
+        <div class="container content-split__inner">
+
+          <div class="content-split__content">
+            <h2 class="content-split__title">Location &amp; Directions</h2>
+            <p class="content-split__text text-main">
+              Centrally located and easy to reach by public transport, car, or bicycle.
+            </p>
+
+            <ul class="content-split__list--icon">
+              <li class="feature-list__item">
+                <div class="feature-list__overlay">
+                  <div class="feature-list__icon">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M4 10.143C4 5.646 7.582 2 12 2C16.418 2 20 5.646 20 10.143C20 14.605 17.447 19.813 13.463 21.674C13.0051 21.8884 12.5056 21.9996 12 21.9996C11.4944 21.9996 10.9949 21.8884 10.537 21.674C6.553 19.812 4 14.606 4 10.144V10.143Z" stroke="currentColor" stroke-width="1.5" />
+                      <path d="M12 13C13.6569 13 15 11.6569 15 10C15 8.34315 13.6569 7 12 7C10.3431 7 9 8.34315 9 10C9 11.6569 10.3431 13 12 13Z" stroke="currentColor" stroke-width="1.5" />
+                    </svg>
+                  </div>
+                </div>
+                <div class="feature-list__content">
+                  <strong class="feature-card__title text-main">Address</strong>
+                  <span class="feature-list__text text-main-small">
+                    Community Science Museum<br />
+                    Karmsundgata 215,<br />
+                    5522 Haugesund
+                  </span>
+                </div>
+              </li>
+
+              <li class="feature-list__item">
+                <div class="feature-list__overlay">
+                  <div class="feature-list__icon">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M8 6H16M4 10H20M6 14H18M9 18H15M6 18V20C6 20.5523 6.44772 21 7 21H17C17.5523 21 18 20.5523 18 20V18M6 6V5C6 4.44772 6.44772 4 7 4H17C17.5523 4 18 4.44772 18 5V6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                    </svg>
+                  </div>
+                </div>
+                <div class="feature-list__content">
+                  <strong class="feature-card__title text-main">Getting Here</strong>
+                  <span class="feature-list__text text-main-small">
+                    <strong>By Bus:</strong> Lines 31, 37, and 54 stop directly outside at "Science Park".<br />
+                    <strong>By Tram:</strong> Lines 11 and 12 to "Central Station", then a 5-minute walk.<br />
+                    <strong>Parking:</strong> Limited paid parking available on-site. We recommend using the "City Center" underground garage nearby.
+                  </span>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="content-split__media">
+            <iframe
+              src="https://www.openstreetmap.org/export/embed.html?bbox=5.15%2C59.37%2C5.4%2C59.47&amp;layer=mapnik&amp;marker=59.4138%2C5.268"
+              title="Map showing the location of Haugesund Science Museum"
+              style="width:100%;height:100%;border:0;"
+              loading="lazy"
+              referrerpolicy="no-referrer"
+            ></iframe>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- MUSEUM FACILITIES -->
+      <section class="facilities">
+        <div class="container">
+
+          <div class="section-header">
+            <div class="section-header__content">
+              <h2 class="section-header__title">Museum Facilities</h2>
+              <p class="section-header__text text-main">
+                Everything you need for a comfortable and memorable visit.
+              </p>
+            </div>
+          </div>
+
+          <div class="exhibitions-category__grid">
+
+            <div class="feature-card feature-card--no-border feature-card--violet">
+              <div class="feature-card__icon-box">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="currentColor" stroke-width="1.5" />
+                  <path d="M9 12L11 14L15 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </div>
+              <h3 class="feature-card__title">Accessibility</h3>
+              <p class="feature-card__text text-main-small">We are committed to making science accessible to everyone.</p>
+              <ul class="content-split__list">
+                <li class="feature-list__item">
+                  <div class="feature-list__overlay"><div class="feature-list__icon"><svg viewBox="0 0 14 14" fill="none"><path d="M2 7L5.5 10.5L12 3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" /></svg></div></div>
+                  <span class="feature-list__text text-main-small">Full wheelchair access</span>
+                </li>
+                <li class="feature-list__item">
+                  <div class="feature-list__overlay"><div class="feature-list__icon"><svg viewBox="0 0 14 14" fill="none"><path d="M2 7L5.5 10.5L12 3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" /></svg></div></div>
+                  <span class="feature-list__text text-main-small">Free audio guides</span>
+                </li>
+                <li class="feature-list__item">
+                  <div class="feature-list__overlay"><div class="feature-list__icon"><svg viewBox="0 0 14 14" fill="none"><path d="M2 7L5.5 10.5L12 3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" /></svg></div></div>
+                  <span class="feature-list__text text-main-small">Braille signage throughout</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="feature-card feature-card--no-border feature-card--orange">
+              <div class="feature-card__icon-box">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M18 8H19C20.0609 8 21.0783 8.42143 21.8284 9.17157C22.5786 9.92172 23 10.9391 23 12C23 13.0609 22.5786 14.0783 21.8284 14.8284C21.0783 15.5786 20.0609 16 19 16H18M3 8H18V17C18 17.5304 17.7893 18.0391 17.4142 18.4142C17.0391 18.7893 16.5304 19 16 19H5C4.46957 19 3.96086 18.7893 3.58579 18.4142C3.21071 18.0391 3 17.5304 3 17V8Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M6 2V5M10 2V5M14 2V5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                </svg>
+              </div>
+              <h3 class="feature-card__title">Food &amp; Drink</h3>
+              <p class="feature-card__text text-main-small">Take a break and recharge at our on-site café.</p>
+              <ul class="content-split__list">
+                <li class="feature-list__item">
+                  <div class="feature-list__overlay"><div class="feature-list__icon"><svg viewBox="0 0 14 14" fill="none"><path d="M2 7L5.5 10.5L12 3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" /></svg></div></div>
+                  <span class="feature-list__text text-main-small">Light meals &amp; sandwiches</span>
+                </li>
+                <li class="feature-list__item">
+                  <div class="feature-list__overlay"><div class="feature-list__icon"><svg viewBox="0 0 14 14" fill="none"><path d="M2 7L5.5 10.5L12 3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" /></svg></div></div>
+                  <span class="feature-list__text text-main-small">Hot and cold beverages</span>
+                </li>
+                <li class="feature-list__item">
+                  <div class="feature-list__overlay"><div class="feature-list__icon"><svg viewBox="0 0 14 14" fill="none"><path d="M2 7L5.5 10.5L12 3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" /></svg></div></div>
+                  <span class="feature-list__text text-main-small">Kid-friendly snack options</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="feature-card feature-card--no-border feature-card--green">
+              <div class="feature-card__icon-box">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M6 2L3 6V20C3 20.5304 3.21071 21.0391 3.58579 21.4142C3.96086 21.7893 4.46957 22 5 22H19C19.5304 22 20.0391 21.7893 20.4142 21.4142C20.7893 21.0391 21 20.5304 21 20V6L18 2H6Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M3 6H21" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                  <path d="M16 10C16 11.0609 15.5786 12.0783 14.8284 12.8284C14.0783 13.5786 13.0609 14 12 14C10.9391 14 9.92172 13.5786 9.17157 12.8284C8.42143 12.0783 8 11.0609 8 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                </svg>
+              </div>
+              <h3 class="feature-card__title">Museum Shop</h3>
+              <p class="feature-card__text text-main-small">Take the discovery home with you from our curated gift shop.</p>
+              <ul class="content-split__list">
+                <li class="feature-list__item">
+                  <div class="feature-list__overlay"><div class="feature-list__icon"><svg viewBox="0 0 14 14" fill="none"><path d="M2 7L5.5 10.5L12 3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" /></svg></div></div>
+                  <span class="feature-list__text text-main-small">Educational gifts &amp; books</span>
+                </li>
+                <li class="feature-list__item">
+                  <div class="feature-list__overlay"><div class="feature-list__icon"><svg viewBox="0 0 14 14" fill="none"><path d="M2 7L5.5 10.5L12 3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" /></svg></div></div>
+                  <span class="feature-list__text text-main-small">Interactive science kits</span>
+                </li>
+                <li class="feature-list__item">
+                  <div class="feature-list__overlay"><div class="feature-list__icon"><svg viewBox="0 0 14 14" fill="none"><path d="M2 7L5.5 10.5L12 3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" /></svg></div></div>
+                  <span class="feature-list__text text-main-small">Exclusive HSM souvenirs</span>
+                </li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <section class="cta">
+        <div class="cta__background"></div>
+        <div class="container cta__content">
+          <h2 class="cta__title">Ready to Explore?</h2>
+          <p class="cta__text text-main">
+            Whether you're planning a family weekend out or scheduling a guided group tour, we're here to make your visit unforgettable.
+          </p>
+          <div class="hero__buttons">
+            <a href="events.html" class="btn btn--primary-negative">See What's On</a>
+            <a href="#" class="btn btn--secondary">Contact Us</a>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__top">
+
+          <div class="footer__column footer__brand">
+            <a href="index.html" class="logo">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="24" height="24" rx="4" fill="url(#logo-grad-footer-v)" />
+                <g clip-path="url(#logo-clip-footer-v)">
+                  <path d="M16.471 7.529C17.706 8.7635 16.705 11.766 14.236 14.2355C11.766 16.705 8.76354 17.7055 7.52904 16.471C6.29404 15.236 7.29504 12.234 9.76454 9.7645C12.234 7.295 15.2365 6.2945 16.471 7.529ZM7.52904 7.529C6.29404 8.764 7.29504 11.7665 9.76404 14.2355C12.234 16.705 15.2365 17.7055 16.471 16.471C17.706 15.2365 16.705 12.234 14.2355 9.7645C11.766 7.295 8.76354 6.2945 7.52904 7.529Z" stroke="white" />
+                  <path d="M13.25 12C13.25 12.3315 13.1183 12.6495 12.8839 12.8839C12.6495 13.1183 12.3315 13.25 12 13.25C11.6685 13.25 11.3505 13.1183 11.1161 12.8839C10.8817 12.6495 10.75 12.3315 10.75 12C10.75 11.6685 10.8817 11.3505 11.1161 11.1161C11.3505 10.8817 11.6685 10.75 12 10.75C12.3315 10.75 12.6495 10.8817 12.8839 11.1161C13.1183 11.3505 13.25 11.6685 13.25 12Z" stroke="white" />
+                </g>
+                <defs>
+                  <linearGradient id="logo-grad-footer-v" x1="0" y1="0" x2="24" y2="24" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#8B5CF6" /><stop offset="1" stop-color="#3B82F6" />
+                  </linearGradient>
+                  <clipPath id="logo-clip-footer-v">
+                    <rect width="12" height="12" fill="white" transform="translate(6 6)" />
+                  </clipPath>
+                </defs>
+              </svg>
+              <span class="logo__text">HSM</span>
+            </a>
+            <p class="footer__text text-main-small">
+              Making science accessible, interactive, and inspiring for everyone. A place where curiosity never stops growing.
+            </p>
+            <div class="footer__socials">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4 10.143C4 5.646 7.582 2 12 2C16.418 2 20 5.646 20 10.143C20 14.605 17.447 19.813 13.463 21.674C13.0051 21.8884 12.5056 21.9996 12 21.9996C11.4944 21.9996 10.9949 21.8884 10.537 21.674C6.553 19.812 4 14.606 4 10.144V10.143Z" stroke="currentColor" stroke-width="1.5" />
+                <path d="M12 13C13.6569 13 15 11.6569 15 10C15 8.34315 13.6569 7 12 7C10.3431 7 9 8.34315 9 10C9 11.6569 10.3431 13 12 13Z" stroke="currentColor" stroke-width="1.5" />
+              </svg>
+              <svg class="icon" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.6665 9.99992C1.6665 6.85742 1.6665 5.28575 2.64317 4.30992C3.61984 3.33409 5.19067 3.33325 8.33317 3.33325H11.6665C14.809 3.33325 16.3807 3.33325 17.3565 4.30992C18.3323 5.28659 18.3332 6.85742 18.3332 9.99992C18.3332 13.1424 18.3332 14.7141 17.3565 15.6899C16.3798 16.6658 14.809 16.6666 11.6665 16.6666H8.33317C5.19067 16.6666 3.619 16.6666 2.64317 15.6899C1.66734 14.7133 1.6665 13.1424 1.6665 9.99992Z" stroke="currentColor" stroke-width="1.25" />
+                <path d="M5 6.6665L6.79917 8.1665C8.33 9.4415 9.095 10.079 10 10.079C10.905 10.079 11.6708 9.4415 13.2008 8.16567L15 6.6665" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" />
+              </svg>
+            </div>
+          </div>
+
+          <nav class="footer__column" aria-label="Footer">
+            <h4 class="footer__title text-main">Navigation</h4>
+            <ul class="footer__list text-main-small">
+              <li><a href="explore.html">Explore</a></li>
+              <li><a href="exhibitions.html">Exhibitions</a></li>
+              <li><a href="events.html">Events &amp; News</a></li>
+              <li><a href="visit.html">Visit</a></li>
+              <li><a href="get-involved.html">Get Involved</a></li>
             </ul>
           </nav>
-        </div>
-      </footer>
-    </div>
 
-    <script>
-      document.getElementById("year").textContent = new Date().getFullYear();
-    </script>
+          <div class="footer__column">
+            <h4 class="footer__title text-main">Opening Hours</h4>
+            <div class="footer__hours text-main-small">
+              <div><span>Tue–Thu</span><span>10:00 – 16:00</span></div>
+              <div><span>Friday</span><span>10:00 – 19:00</span></div>
+              <div><span>Saturday</span><span>09:00 – 16:00</span></div>
+              <div><span>Sunday</span><span>09:00 – 13:00</span></div>
+            </div>
+            <p class="footer__caption text-main-small">Free admission daily</p>
+          </div>
+
+        </div>
+
+        <div class="footer__bottom">
+          <p class="footer__copyright text-main-small">
+            © 2026 Community Science Museum. All rights reserved.
+          </p>
+          <div class="footer__legal text-main-small">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
   </body>
 </html>
