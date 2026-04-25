@@ -31,6 +31,14 @@ h3 {
   line-height: var(--lh-28);
 }
 
+h4 {
+  margin: 0;
+  font-family: var(--font-family-1);
+  font-size: var(--fs-16);
+  font-weight: var(--fw-400);
+  line-height: var(--lh-24);
+}
+
 p,
 a {
   margin: 0;

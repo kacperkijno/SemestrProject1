@@ -147,6 +147,47 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+
+  /* EFEKTY ZE ZDJĘCIA (Figma) */
+  /* Tryb luminosity (jasność) */
+  background-blend-mode: luminosity; 
+  /* Krycie 40% */
+  opacity: 0.4; 
+  
+  /* Kolor podkładowy, z którym miesza się zdjęcie w trybie luminosity */
+  background-color: var(--color-black); 
+}
+
+.hero--exhibitions .hero__bg {
+  background-image:
+    radial-gradient(
+      circle at center,
+      rgba(255, 255, 255, 0.12) 0%,
+      rgba(23, 23, 23, 0) 80%
+    ),
+    radial-gradient(
+      circle at center,
+      rgba(255, 255, 255, 0.18) 0%,
+      rgba(23, 23, 23, 0) 80%
+    ),
+    linear-gradient(rgba(23, 23, 23, 0.68), rgba(23, 23, 23, 0.8)),
+    url("../../assets/images/science-museum-elephant-exhibit.webp");
+}
+
+.hero--explore .hero__bg {
+  background-image:
+    radial-gradient(
+      circle at center,
+      rgba(255, 255, 255, 0.12) 0%,
+      rgba(23, 23, 23, 0) 80%
+    ),
+    radial-gradient(
+      circle at center,
+      rgba(255, 255, 255, 0.18) 0%,
+      rgba(23, 23, 23, 0) 80%
+    ),
+    linear-gradient(rgba(23, 23, 23, 0.68), rgba(23, 23, 23, 0.8)),
+    url("../../assets/images/man-using-microscope.webp");
 }
 
 .hero__content {
@@ -307,6 +348,53 @@
   --card-border-accent: var(--color-orange-20);
 }
 
+.feature-card--red {
+  --card-accent: var(--color-red);
+  --card-bg-accent: var(--color-red-10);
+  --card-border-accent: var(--color-red-20);
+}
+
+.feature-card--small {
+  padding: var(--space-16);
+  border-radius: var(--radius-16);
+  gap: var(--space-8);
+  background: none;
+}
+
+.feature-card--small .feature-card__icon-box {
+  background-color: none;
+  border: none;
+    width: 20px;
+  height: 20px;
+  margin-bottom: 0;
+}
+
+.feature-card--small .icon {
+  width: 20px;
+  height: 20px;
+  color: var(--color-blue);
+}
+
+.feature-card--small:hover {
+  transform: translateY(-4px);
+  border-color: var(--color-blue);
+}
+
+.feature-card--small::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(135deg, var(--color-blue-20), transparent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 0;
+}
+
+.feature-card--small:hover::before {
+  opacity: 1;
+}
+
 /* ----- Content Split ----- */
 
 .content-split {
@@ -315,17 +403,22 @@
   --accent-color: var(--color-violet);
   --accent-bg: var(--color-violet-10);
   --split-direction: row;
+  --gradient-left: auto;
+  --gradient-right: 0;
+  --gradient-x-pos: 70%;
 }
 
 .content-split::before {
   content: "";
   position: absolute;
   top: 0;
-  right: 0;
+  /* Używamy zmiennych */
+  right: var(--gradient-right);
+  left: var(--gradient-left);
   bottom: 0;
   width: 60%;
   background: radial-gradient(
-    circle at 70% 50%,
+    circle at var(--gradient-x-pos) 50%,
     var(--accent-bg) 0%,
     transparent 70%
   );
@@ -349,11 +442,21 @@
   --accent-bg: var(--color-green-10);
 }
 
+.content-split--orange {
+  --accent-color: var(--color-orange);
+  --accent-bg: var(--color-orange-10);
+}
+
+.content-split--red {
+  --accent-color: var(--color-red);
+  --accent-bg: var(--color-red-10);
+}
+
 .content-split--reverse {
   --split-direction: row-reverse;
   --gradient-right: auto;
   --gradient-left: 0;
-  --gradient-pos: 30%;
+  --gradient-x-pos: 30%; /* Przesuwamy środek gradientu na lewo */
 }
 
 .content-split__inner {
@@ -370,7 +473,7 @@
 .content-split__content {
   display: flex;
   flex-direction: column;
-  gap: var(--space-16);
+  gap: var(--space-24);
   align-items: flex-start;
 }
 
@@ -424,6 +527,13 @@
 
 .content-split__media:hover img {
   transform: scale(1.05);
+}
+
+.content-split__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-24);
+  width: 100%;
 }
 
 /* ----- Section Header ----- */
@@ -608,6 +718,7 @@
   font-size: var(--fs-80);
   font-weight: var(--fw-700);
   color: var(--color-white);
+  max-width: 800px;
 }
 
 .cta__text {
@@ -721,4 +832,176 @@
 
 .footer__legal a:hover {
   color: var(--color-white);
+}
+
+/* ----- Temporary Exhibition ----- */
+
+.temporary-exhibition .container{
+  position: relative;
+  overflow: hidden;
+  background-color: var(--color-black);
+  padding: var(--space-32) 0;
+  border: var(--stroke-1) solid var(--image-border);
+  border-radius: var(--radius-16);
+  z-index: 0;
+}
+
+.temporary-exhibition__bg {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  
+  /* Kolejność warstw: */
+  background-image: 
+    /* 1. Gradient od czerni po lewej do przezroczystości po prawej */
+    linear-gradient(to right, 
+      var(--color-black) 0%, 
+      rgba(23, 23, 23, 0.8) 30%, 
+      transparent 100%
+    ),
+    /* 2. Zdjęcie w tle */
+    url("../../assets/images/scientist-large-research-equipment.webp");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  /* EFEKTY ZE ZDJĘCIA (Figma) */
+  /* Tryb luminosity (jasność) */
+  background-blend-mode: luminosity; 
+  /* Krycie 40% */
+  opacity: 0.4; 
+  
+  /* Kolor podkładowy, z którym miesza się zdjęcie w trybie luminosity */
+  background-color: var(--color-black);
+  transition: 0.4s ease;
+}
+
+.temporary-exhibition .container:hover {
+  border-color: var(--color-violet); /* Zmiana ramki na fioletową */
+}
+
+.temporary-exhibition .container:hover .temporary-exhibition__bg {
+  /* 1. Wyłączamy efekt luminosity - przywracamy naturalne kolory */
+  background-blend-mode: normal;
+  
+  /* 2. Przywracamy pełne krycie (z 40% na 100%) */
+  opacity: 1;
+
+  /* 3. Powtarzamy gradient i zdjęcie (możesz też dodać inne zdjęcie jeśli chcesz) */
+  background-image: 
+    linear-gradient(to right, 
+      var(--color-black) 0%, 
+      rgba(23, 23, 23, 0.8) 30%, 
+      transparent 100%
+    ),
+    url("../../assets/images/scientist-large-research-equipment.webp");
+    transform: scale(1.05);
+}
+
+.temporary-exhibition .container:hover .eyebrow--badge {
+  background-color: var(--color-violet-10);
+  border-color: var(--color-violet-20);
+}
+
+.temporary-exhibition__container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-24);
+  padding: var(--space-48);
+  position: relative;
+  z-index: 1;
+  max-width: 670px;
+}
+.temporary-exhibition .eyebrow--badge {
+  color: var(--color-white);
+align-self: flex-start;
+}
+
+.temporary-exhibition__title {
+  color: var(--color-white);
+}
+
+.temporary-exhibition__description {
+  color: var(--color-grey-medium);
+}
+
+/* Responsywność */
+@media (max-width: 992px) {
+  .temporary-exhibition__container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .temporary-exhibition__content-stack {
+    align-items: center;
+  }
+
+  .temporary-exhibition__button-group {
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch; /* Rozciąganie do boków na mobile */
+  }
+
+  .temporary-exhibition__image-frame {
+    height: 320px;
+  }
+}
+
+@media (max-width: 768px) {
+
+.hero__buttons {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-16);
+  justify-content: center;
+  align-items: stretch;
+}
+
+.content-split__inner {
+  flex-direction: column;
+  gap: var(--space-32);
+}
+
+.section-header {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-16);
+
+}
+
+.section-header__title {
+text-align: center;
+}
+
+.feature-card--no-border {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  text-align: left;
+}
+
+.cta__content .btn--primary-negative {
+  width: 100%;
+
+}
+
+.footer__top {
+  grid-template-columns: 1fr;
+  gap: var(--space-32);
+
+}
+
+.footer__bottom {
+  flex-direction: column;
+  gap: var(--space-16);
+  align-items: end;
+}
+
+.content-split__grid {
+  grid-template-columns: 1fr;
+}
+
 }

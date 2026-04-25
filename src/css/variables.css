@@ -89,7 +89,7 @@
   --layer-blur-blur: blur(120px);
 }
 
-@media (max-width: 47.9375rem) {
+@media (max-width: 768px) {
   :root {
     --space-96: 24px;
     --space-120: 60px;
