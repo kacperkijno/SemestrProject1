@@ -974,6 +974,9 @@
 
 .footer__title {
   color: var(--color-white);
+  font-size: var(--fs-16);
+  font-weight: var(--fw-400);
+  line-height: var(--lh-24);
 }
 
 .footer__list {
