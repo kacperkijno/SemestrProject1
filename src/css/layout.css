@@ -112,7 +112,7 @@
 
 .hero {
   position: relative;
-  height: calc(70vh - 72px);
+  height: calc(80vh - 72px);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -122,6 +122,10 @@
 }
 
 /* ----- Intro ----- */
+
+.intro {
+  padding: var(--space-120) var(--space-96);
+}
 
 .intro__content {
   max-width: 900px;
