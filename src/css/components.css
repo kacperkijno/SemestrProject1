@@ -770,7 +770,7 @@
 }
 
 .section-header__btn {
-  --btn-color: var(--color-violet);
+  --btn-color: var(--color-violet-light);
 }
 
 /* ----- Event Card ----- */
@@ -1019,7 +1019,7 @@
 
 .footer__caption {
   margin-top: var(--space-8);
-  color: var(--color-violet);
+  color: var(--color-violet-light);
 }
 
 .footer__bottom {
@@ -1031,7 +1031,7 @@
 }
 
 .footer__copyright {
-  color: var(--color-grey-dark);
+  color: var(--color-grey-medium);
 }
 
 .footer__legal {
@@ -1040,7 +1040,7 @@
 }
 
 .footer__legal a {
-  color: var(--color-grey-dark);
+  color: var(--color-grey-medium);
   text-decoration: none;
   transition: color 0.2s ease;
 }
